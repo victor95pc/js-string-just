@@ -14,7 +14,7 @@ gulp.task 'compile', ->
     .pipe gulp.dest 'lib'
 
 gulp.task 'testCompile', ->
-  gulp.src './test/{,**/}*.ts'
+  gulp.src 'test/**/*.ts'
     .pipe $.plumber()
     .pipe $.tsc()
     .pipe gulp.dest '.tmp'
