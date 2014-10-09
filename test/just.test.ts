@@ -1,4 +1,5 @@
 /// <reference path="../typings/tsd.d.ts" />
+/// <reference path="string.d.ts" />
 
 import Chai = require('chai');
 var expect = Chai.expect;
@@ -38,5 +39,15 @@ describe('rjust', () => {
 
     it('does not truncate given string', () => {
         expect(just.rjust('test', 10, '1234')).to.equal('123412test');
+    });
+});
+
+describe('String', () => {
+    before(() => {
+        just();
+    });
+
+    it('can be justified', () => {
+        expect('test'.ljust(10)).to.equal('test      ');
     });
 });

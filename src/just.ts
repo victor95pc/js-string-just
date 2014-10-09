@@ -20,7 +20,7 @@ var just = function(append: boolean): Function {
         if (typeof this === 'string' || this instanceof String) {
             str = <string> this;
             len = <number> string;
-            chr = <string> length;
+            chr = <string> length ? length : ' ';
         } else {
             str = <string> string;
             len = <number> length;
@@ -41,26 +41,29 @@ var just = function(append: boolean): Function {
     }
 };
 
-interface String {
-    ljust(length: number, chars?: string): string;
-    rjust(length: number, chars?: string): string;
+interface IJust {
+    (string: string, length: number, chars?: string): string;
 }
 
-interface IJust {
+interface IJustString {
+    (length: number, chars?: string): string;
+}
+
+interface IJustInstall {
     (): void;
-    ljust: Function;
-    rjust: Function;
+    ljust: IJust;
+    rjust: IJust;
 }
 
 var ljust = just(true);
 var rjust = just(false);
 
-var install = <IJust> function(): void {
-    String.prototype['ljust'] = ljust;
-    String.prototype['rjust'] = rjust;
+var install = <IJustInstall> function(): void {
+    String.prototype['ljust'] = <IJustString> ljust;
+    String.prototype['rjust'] = <IJustString> rjust;
 };
 
-install.ljust = ljust;
-install.rjust = rjust;
+install.ljust = <IJust> ljust;
+install.rjust = <IJust> rjust;
 
 export = install;
