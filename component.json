@@ -2,7 +2,7 @@
     "name": "js-string-just",
     "repo": "MisumiRize/js-string-just",
     "description": "Add Ruby ljust/rjust methods to JavaScript String",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "keywords": [
         "string",
         "just",

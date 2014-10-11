@@ -1,6 +1,6 @@
 {
   "name": "string-just",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Add Ruby ljust/rjust methods to JavaScript String",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MisumiRize/string-just.js.git"
+    "url": "https://github.com/MisumiRize/js-string-just.git"
   },
   "keywords": [
     "string",
@@ -18,9 +18,9 @@
   "author": "Rize MISUMI",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MisumiRize/string-just.js/issues"
+    "url": "https://github.com/MisumiRize/js-string-just/issues"
   },
-  "homepage": "https://github.com/MisumiRize/string-just.js",
+  "homepage": "https://github.com/MisumiRize/js-string-just",
   "devDependencies": {
     "chai": "^1.9.2",
     "coffee-script": "^1.8.0",
